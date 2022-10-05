@@ -1,5 +1,4 @@
-
-
+##how many parameters do we save using the save spell? obviously we save full characters, but what if we had premade characters only? story triggers, exp?
 
 
 def main():
@@ -7,8 +6,6 @@ def main():
     print("Would you like to start a new game or load a game?")
     print("type START to start a game, or LOAD to load the saved file")
     startMenu()
-
-
 
     ##this is essentially only going to call imports and execute that code. I don't plan on writing any complex logic here.
 
