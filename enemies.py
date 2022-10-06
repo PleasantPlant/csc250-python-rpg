@@ -1,18 +1,25 @@
 
 
-class Enemy():
+class Monster:
+    def __init__(self):
+        self.name = ""
+        self.type = ""
+        self.ac = 11
+        self.hit_p_max = 0
+        self.minDmg = 0
+        self.maxDmg = 0
+        self.morale = ""
+        self.movement = 0
+        self.xp = 0
 
-    def __init__(self) -> None:
+    def roll_to_hit(self):
         pass
 
-    def initEnemy(self):
-        ##this will pull from a list of enemies so I can initialize enemy with several different preset enemies.
+    def roll_for_damage(self):
         pass
 
-    def modCharSheet(self):
-        ##for modifying character sheet, except I don't plan to write enemy charactersheets to another file. IE, individual enemies will not be saved across shutdowns.
+    def get_ac(self):
         pass
 
-    def enemyData(self):
-        ##this is to store enemy data for the duration of combat
+    def get_movement(self):
         pass
