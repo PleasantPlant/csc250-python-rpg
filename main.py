@@ -1,4 +1,10 @@
-##how many parameters do we save using the save spell? obviously we save full characters, but what if we had premade characters only? story triggers, exp?
+from rpg.character import Character
+from rpg.combat import *
+from rpg.enemy import *
+from rpg.equipment import *
+
+##how many parameters do we save using the save spell? obviously we save full characters, but what if we had premade characters only? 
+##story triggers? exp?
 
 
 def main():
