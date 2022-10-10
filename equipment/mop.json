@@ -1,0 +1,9 @@
+{
+    "name": "Mop",
+    "price": 5,
+    "weight": 4,
+    "size": 1,
+    "damage": 6,
+    "die": 1,
+    "mod": "str"
+}

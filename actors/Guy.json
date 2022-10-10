@@ -1,0 +1,21 @@
+{
+    "name": "Guy",
+    "str": 15,
+    "int": 16,
+    "wis": 12,
+    "dex": 13,
+    "con": 9,
+    "cha": 10,
+    "race": "Human",
+    "job": "Janitor",
+    "level": 1,
+    "maxHP": 10,
+    "currentHP": 10,
+    "movement": 30,
+    "armors": [],
+    "weapons": [],
+    "xp": 0,
+    "type": "",
+    "current_weapon": "",
+    "current_armor": ""
+}
