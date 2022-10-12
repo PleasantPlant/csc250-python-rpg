@@ -1,11 +1,9 @@
-
-
 class Monster:
     def __init__(self):
         self.name = ""
         self.type = ""
         self.ac = 11
-        self.hit_p_max = 0
+        self.maxHP = 0
         self.minDmg = 0
         self.maxDmg = 0
         self.morale = ""

@@ -9,15 +9,27 @@ class charGen:
     def character(self):
         pass
 
-    def generate(self):
+    def generate(self, diceRoll=False):
         races = ("Human", "Elf", "Dwarf", "Lizard", "Alien")
         classes = ("Knight", "Ranger", "Mage")
         char = Character()
         stats = []
         race = randchoice(races)
         job = randchoice(classes)
-        for i in range(6):
-            stats.append(randint(3, 19))
+        if diceRoll == False:
+            for i in range(6):
+                stats.append(randint(3, 18))
+        ##Simulating the d6 rolls, off by default.
+        if diceRoll == True:
+            while len(stats) < 6:
+                x = 0
+                tempRolls = []
+                for i in range(4):
+                    tempRolls.append(randint(1, 6))
+                tempRolls.sort(reverse=True)
+                for i in range(3):
+                    x += tempRolls[i]
+                stats.append(x)
 
         stats.sort(reverse=True)
 

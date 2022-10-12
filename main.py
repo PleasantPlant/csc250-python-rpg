@@ -27,6 +27,23 @@ from modules.equipment import *
 #             print("invalid command, please re-input the command.")
 #             return startMenu()
 
+
+def player_ply_function():
+    pass
+
+
+def endGameFunction(winner):
+    pass
+
+
 guy = Character()
 guy.load("csc250-python-rpg/actors/Guy.json")
-print(guy.name)
+
+stain = Monster()
+stain.ac = 12
+stain.name = "stain"
+stain.maxDmg = 3
+stain.minDmg = 0
+stain.maxHP = 4
+
+fight = Combat([guy], [stain], player_ply_function)
