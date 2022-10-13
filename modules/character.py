@@ -65,3 +65,6 @@ class Character:
         ##match case statement to modify the charactersheet based on passed inputs. add more inputs once other things are fleshed out.
         ##specifically this mods stats, so HP, AC, STR, etc.
         pass
+
+    def charSave(self):
+        pass
