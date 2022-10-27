@@ -28,22 +28,29 @@ from modules.equipment import *
 #             return startMenu()
 
 
-def player_ply_function():
-    pass
+def ply_function(result):
+    if result.get("hit"):
+        print(f'{result.get("attacker_name")} scored a hit.')
+    else:
+        print(f'{result.get("attacker_name")} missed.')
+    print(result)
 
 
 def endGameFunction(winner):
-    pass
+    print(winner)
+    print("Game Over.")
 
 
 guy = Character()
 guy.load("csc250-python-rpg/actors/Guy.json")
 
 stain = Monster()
-stain.ac = 12
+stain.ac = 15
 stain.name = "stain"
-stain.maxDmg = 3
+stain.maxDmg = 999
 stain.minDmg = 0
 stain.maxHP = 4
+stain.currentHP = 4
 
-fight = Combat([guy], [stain], player_ply_function)
+fight = Combat([guy], [stain], ply_function, endGameFunction)
+fight.start()

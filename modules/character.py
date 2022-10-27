@@ -1,15 +1,16 @@
 import json
+from random import randint
 
 
 class Character:
     def __init__(self):
         self.name = "player"
-        self.strength = 0
+        self.str = 0
         self.int = 0
-        self.wisdom = 0
-        self.dexterity = 0
-        self.constitution = 0
-        self.charisma = 0
+        self.wis = 0
+        self.dex = 0
+        self.con = 0
+        self.cha = 0
         self.race = ""
         self.job = ""
         self.level = 1
@@ -18,10 +19,13 @@ class Character:
         self.movement = 0
         self.armors = []
         self.weapons = []
+        self.minDMG = 1
+        self.maxDMG = 6
         self.xp = 0
         self.type = ""
         self.current_weapon = ""
         self.current_armor = ""
+        self.tag = "PC"
 
     def load(self, path):
         with open(path) as f:
@@ -47,13 +51,13 @@ class Character:
         pass
 
     def roll_to_hit(self):
-        pass
+        return randint(1, 20)
 
     def roll_for_damage(self):
-        pass
+        return randint(self.minDMG, self.maxDMG)
 
     def get_ac(self):
-        pass
+        return 15
 
     def get_movement(self):
         pass
@@ -61,9 +65,19 @@ class Character:
     def get_ability_bonuses(self):
         pass
 
-    def modCharsheet(self):
+    def modCharsheet(self, param):
         ##match case statement to modify the charactersheet based on passed inputs. add more inputs once other things are fleshed out.
         ##specifically this mods stats, so HP, AC, STR, etc.
+        match param:
+            case "weapon":
+                pass
+            case "armor":
+                pass
+
+    def update_weapon(self):
+        pass
+
+    def update_armor(self):
         pass
 
     def charSave(self):
